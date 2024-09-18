@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.1s;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0f172a] min-h-screen overflow-y-auto;
+  }
+}
+@layer components {
+  label {
+    @apply text-slate-400 mb-1 font-semibold;
+  }
+  input,
+  select,
+  textarea {
+    @apply bg-slate-800 text-slate-200 outline-none rounded-md px-2 py-1.5 mb-3;
+  }
+  button[type="submit"] {
+    @apply border border-slate-800 text-slate-400 rounded-md px-3 py-1.5 cursor-pointer hover:text-slate-200 hover:bg-slate-800 hover:bg-opacity-25 disabled:cursor-not-allowed;
+  }
+}
