@@ -19,6 +19,17 @@ export default function Navbar() {
           Posts
         </NavLink>
         <NavLink
+          to="/users"
+          className={({ isActive }) =>
+            `
+            hover:text-white
+            ${isActive ? "text-white" : "text-slate-400"}
+            `
+          }
+        >
+          Users
+        </NavLink>
+        <NavLink
           to="/add-post"
           className={({ isActive }) =>
             `
