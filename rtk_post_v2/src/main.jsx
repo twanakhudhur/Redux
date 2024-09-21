@@ -5,7 +5,9 @@ import "./index.css";
 import { Provider } from "react-redux";
 import { store } from "./store.js";
 import { fetchUsers } from "./features/users/usersSlice.js";
+import { fetchPosts } from "./features/posts/postsSlice.js";
 
+store.dispatch(fetchPosts());
 store.dispatch(fetchUsers());
 
 createRoot(document.getElementById("root")).render(
